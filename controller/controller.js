@@ -1,7 +1,12 @@
 var bCrypt = require("bcryptjs");
-const axios = require("axios");
+
+async function signin(req, res) {
+  res.status(200).json("hii");
+}
+
 
 
 module.exports = {
-  
+  signin,
+ 
 };
