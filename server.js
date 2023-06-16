@@ -6,7 +6,7 @@ const morgan = require("morgan")
 const app = express()
 dotenv.config({path:"config/config.env"})
 var corOptions = {
-    origin:"https://crcs-dashboard-git-master-abdullahzaid29.vercel.app",
+    origin:"https://crcs-dashboard-2023.vercel.app",
     credentials: true,
 }
 // models.sequelize.sync()
