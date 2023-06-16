@@ -2,19 +2,19 @@ const express = require("express")
 const cors = require("cors")
 const dotenv = require("dotenv")
 const morgan = require("morgan")
-var models = require("./models");
+
 const app = express()
 dotenv.config({path:"config/config.env"})
 var corOptions = {
     origin:"http://localhost:5000",
     credentials: true,
 }
-models.sequelize.sync()
-    .then(function () {
-        console.log('Connected to Database!!')
-    }).catch(function (err) {
-        console.log(err, "Something went wrong with the Database Update!")
-});
+// models.sequelize.sync()
+//     .then(function () {
+//         console.log('Connected to Database!!')
+//     }).catch(function (err) {
+//         console.log(err, "Something went wrong with the Database Update!")
+// });
 
 app.use(morgan('tiny'))
 
@@ -28,7 +28,7 @@ const router = require('./routes/Router.js')
 app.use('/api',router)
 
 app.get("/",(req,res)=>{
-res.json({Message:"Server is running on port 6000"})
+res.json({Message:"Server is running on port 3001"})
 })
 
 const PORT = process.env.PORT 
